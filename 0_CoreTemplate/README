@@ -1,0 +1,30 @@
+******************************
+* Core Template V2   *
+* Created: 04/09/2023        *
+* Last Mod : 12/02/2024     *
+******************************
+
+! Don't forget to include .tex files in Pages.tex
+! All project specific settings (such as Title & Name) are to be set in SetUp
+
+*** Commands ***
+\Pic{path}{caption}{label} -> single centered picture
+\dPic{path1}{caption1}{path2}{caption2} -> double side by side picture
+
+
+
+*** Useful tips
+Minted for code
+
+\underbrace in equations
+\Arrow in WithArrow enviroment
+
+\[\begin{WithArrows}[format=l, jot=4pt]
+\sin^2x = 3 \cdot \cos^2x \Arrow[]{$\div \cos^2x$} \\[4pt]
+\underbrace{ \frac{\sin^2x} {\cos^2x}}_{frac} = 3
+\end{WithArrows}\]
+
+*** To Do ***
+
+- Nice tables
+

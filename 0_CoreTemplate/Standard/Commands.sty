@@ -1,0 +1,98 @@
+% -------------------------------------------------------
+%
+%                      Do not change 
+%
+% -------------------------------------------------------
+
+\newcommand{\frontPage}{
+    \if \vPDG Y {
+        \if \vNewPDG Y {
+            \centering
+            \begin{figure}
+                \raggedright
+                \includesvg{0_CoreTemplate/Logos/Logo.svg}
+            \end{figure}
+            \noindent\rule{\textwidth}{0.5pt}
+            \vspace{-1cm}
+            \begin{flushleft}
+                \textbf{\vContext} \hfill \vDate
+            \end{flushleft}
+            \vspace{-0.8cm}
+            \noindent\rule{\textwidth}{0.5pt}
+            
+            \vspace*{\fill}
+            \textbf{\Large \vTitle}
+            
+            \large{\vSubtitle}
+            \vspace*{\fill}
+            
+            
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width = 0.7 \textwidth] {Graphics/\vTitleImage}
+            \end{figure}
+            \vspace*{\fill}
+            \textit{\vAuthor}
+            
+            \vfill
+            \noindent\rule{\textwidth}{0.5pt}
+            \vspace{-1.2cm}
+            \begin{flushleft}
+            \textit{Professor:} \vProf \\
+            \textit{Assistant:} \vAssistant  
+            \end{flushleft}
+            \vspace{-0.8cm}
+            \noindent\rule{\textwidth}{0.5pt}
+        }
+        \else {
+            \renewcommand\maketitlehooka{\null\mbox{}\vfill}
+            \renewcommand\maketitlehookd{\vfill\null}
+            \title{\textbf{\Huge \vTitle}} 
+            \subtitle{\Large \vSubtitle}
+            \author{\vAuthor}
+            \date{\vDate}
+            \clearpage \maketitle
+    
+            \begin{tikzpicture}[remember picture,overlay] 
+            \node [xshift=0cm,yshift=-7cm] at (current page.north)
+            {
+                \includesvg[width=0.5 \textwidth]{Logos/Logo.svg}
+            };		 
+            \end{tikzpicture}
+        }\fi
+        \thispagestyle{empty}
+        \newpage
+        \if \vAbs Y \include{0_Abstract} \fi
+        \tableofcontents
+        \if \vLoF Y \listoffigures \fi
+        \if \vLoT Y \listoftables \fi
+        \newpage
+    } 
+    \else {
+        \title{\textbf{\Huge \vTitle}} 
+        \subtitle{\Large \vSubtitle}
+        \author{\vAuthor}
+        \date{\vDate}
+        \maketitle
+        \begin{tikzpicture}[remember picture,overlay] 
+        \node [xshift=3.5cm,yshift=-1.6cm] at (current page.north west)
+        {
+        \includesvg[width=10em]{Logos/Logo.svg}
+        };		 
+        \end{tikzpicture}
+        
+        \tableofcontents
+        \if \vLoF Y \listoffigures \fi
+        \if \vLoT Y \listoftables \fi
+        \vspace{2cm}
+    } \fi
+
+}
+
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+}
+

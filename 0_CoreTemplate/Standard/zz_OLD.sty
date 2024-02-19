@@ -1,0 +1,33 @@
+\newcommand{\dPic}[4]{
+    \begin{figure}[h]
+        \centering
+        \begin{minipage}{0.5\textwidth}
+            \centering
+            \includegraphics[width=0.9\textwidth]{Graphics/#1} % first figure itself
+            \caption{#2}
+        \end{minipage}\hfill
+        \begin{minipage}{0.5\textwidth}
+            \centering
+            \includegraphics[width=0.9\textwidth]{Graphics/#3} % second figure itself
+            \caption{#4}
+        \end{minipage}
+    \end{figure}
+}
+
+\newcommand{\Pic}[3]{
+\if \vTwoCol Y
+    \begin{TwoColFigure}
+        \centering
+        \includegraphics[width=\linewidth]{Graphics/#1}
+        \captionof{figure}{#2}
+        \label{#3}
+    \end{TwoColFigure}
+\else
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width = 0.6 \textwidth]{Graphics/#1}
+        \caption{#2}
+        \label{#3}
+    \end{figure}
+\fi
+}

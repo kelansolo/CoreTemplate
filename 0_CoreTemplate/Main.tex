@@ -1,0 +1,24 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{Standard/Std_SU} %Standard set up file
+\usepackage{SetUp} %Unit set up file
+
+
+\begin{document}
+
+\frontPage
+\if \vTwoCol Y \begin{multicols}{2} \fi
+
+%INPUT PAGES (Use \include for page break after) 
+\input{Pages}
+
+
+
+
+
+
+
+\if \vTwoCol Y \end{multicols} \fi
+
+\if \vBib Y \bibliography{Bibliography/Bib} \fi
+
+\end{document}
