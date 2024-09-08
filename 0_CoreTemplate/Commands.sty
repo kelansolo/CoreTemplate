@@ -5,6 +5,7 @@
 % -------------------------------------------------------
 
 \newcommand{\frontPage}{
+    \pagenumbering{gobble}
     \if \vPDG Y {
         \if \vNewPDG Y {
             \centering
@@ -39,7 +40,7 @@
             \vspace{-1.2cm}
             \begin{flushleft}
             \textit{Professor:} \vProf \\
-            \textit{Assistant:} \vAssistant  
+            \textit{Supervisor:} \vAssistant  
             \end{flushleft}
             \vspace{-0.8cm}
             \noindent\rule{\textwidth}{0.5pt}
@@ -86,7 +87,7 @@
         \if \vLoT Y \listoftables \fi
         \vspace{2cm}
     } \fi
-
+    \pagenumbering{arabic}
 }
 
 \newcommand{\subtitle}[1]{%
@@ -96,3 +97,6 @@
     \vskip0.5em}%
 }
 
+\newcommand{\todo}[1]{
+\textbf{\textcolor{red}{TODO: #1}}
+}

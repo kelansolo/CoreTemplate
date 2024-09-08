@@ -1,11 +1,14 @@
 ******************************
-* Core Template V2   *
-* Created: 04/09/2023        *
-* Last Mod : 12/02/2024     *
+* Core Template V2           *
+* Created: 08/09/2024        *
+* Last Mod : 08/09/2024      *
 ******************************
+This project aims to simplify and speed up report writing. 
+
+First, modify the settings in SetUp.sty. These should be the only modifications needed for the report. If required, extra packages can be added to Package.sty. 
+
 
 ! Don't forget to include .tex files in Pages.tex
-! All project specific settings (such as Title & Name) are to be set in SetUp
 
 *** Useful tips
 Minted for code
